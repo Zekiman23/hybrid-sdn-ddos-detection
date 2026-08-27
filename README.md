@@ -6,10 +6,28 @@ Python 3.12.3 served as the primary runtime environment. This isolated environme
 All Python packages were installed via pip within this virtual environment, with versions explicitly pinned in a requirements.txt file to support exact reproduction. 
 The key software components and libraries used are to be found in the requirement.txt file. 
 
-instruction steps:
-i. prepare the VMware workstation Pro (optional)
+## 🚀 Installation & Setup
 
-A. Preparing dataset:
+### 1. Clone the Repository
+git clone [https://github.com/Zekiman23/hybrid-sdn-ddos-detection.git](https://github.com/Zekiman23/hybrid-sdn-ddos-detection.git)
+cd hybrid-sdn-ddos-detection
+2. Set Up Virtual Environment
+Bash
+# On Linux / macOS / WSL
+python3 -m venv venv
+source venv/bin/activate
+
+# On Windows (PowerShell)
+python -m venv venv
+.\venv\Scripts\activate
+3. Install Python Dependencies
+Bash
+pip install --upgrade pip
+pip install -r requirements.txt
+
+
+instruction steps:
+A. Preparing dataset:(this step is already done on the repository but to recreate the whole experiment starting from the training do steps from A -C )
 
 download and insert the following selected csv data from CIC-DDoS2019 and CIC-IDS2017 into: hybrid-sdn-ddos-detection/data/raw
 CIC-DDoS2019 sourced:
@@ -35,7 +53,9 @@ step2: on terminal 1: /src/data_prep$ python3 prepare_dataset.py
 C. Train the model:
 
 step1: on terminal 1: /src/model$ python3 RF_trainer.py
+
 D. Run offline evaluation of the framework: 
+
 step1: on terminal 1: /src/model$ python3 offline_evaluation.py
 
 E. Run online evaluation of the framework
