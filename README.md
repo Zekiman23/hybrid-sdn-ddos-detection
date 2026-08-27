@@ -23,7 +23,7 @@ python -m venv venv
 3. Install Python Dependencies
 Bash
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 
 instruction steps:
