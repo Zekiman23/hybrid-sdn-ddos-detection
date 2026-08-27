@@ -1,0 +1,16 @@
+# Ignore specific files
+data/raw/large_dataset.csv
+models/rf_model.joblib
+
+# Ignore an entire directory
+logs/
+venv/
+__pycache__/
+
+# Ignore all files ending with a specific extension
+*.csv
+*.log
+*.pyc
+
+# Exception: track a specific file even if its extension is ignored
+!data/processed/sample_schema.csv
